@@ -1,0 +1,193 @@
+/* <Drawer
+  variant="permanent"
+  open={open}
+  sx={{
+    backgroundColor: "#E4003A", // Set background color for the entire drawer
+    "& .MuiDrawer-paper": {
+      backgroundColor: "#E4003A", // Ensures the paper inside the drawer also gets the color
+      color: "white", // Makes text/icons visible
+    },
+  }}
+>
+  <DrawerHeader
+    sx={{
+      backgroundColor: "#E4003A", // Apply background color to header as well
+    }}
+  >
+    <IconButton onClick={handleDrawerClose} sx={{ color: "white" }}>
+      {theme.direction === "rtl" ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+    </IconButton>
+  </DrawerHeader>
+  <Divider sx={{ backgroundColor: "white" }} />
+  <List>
+    {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+      <ListItem key={text} disablePadding sx={{ display: "block" }}>
+        <ListItemButton
+          sx={[
+            {
+              minHeight: 48,
+              px: 2.5,
+              color: "white",
+            },
+            open
+              ? {
+                  justifyContent: "initial",
+                }
+              : {
+                  justifyContent: "center",
+                },
+          ]}
+        >
+          <ListItemIcon
+            sx={[
+              {
+                minWidth: 0,
+                justifyContent: "center",
+                color: "white", // Ensures icons remain visible
+              },
+              open
+                ? {
+                    mr: 3,
+                  }
+                : {
+                    mr: "auto",
+                  },
+            ]}
+          >
+            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+          </ListItemIcon>
+          <ListItemText
+            primary={text}
+            sx={[open ? { opacity: 1 } : { opacity: 0 }]}
+          />
+        </ListItemButton>
+      </ListItem>
+    ))}
+  </List>
+  <Divider sx={{ backgroundColor: "white" }} />
+  <List>
+    {["All mail", "Trash", "Spam"].map((text, index) => (
+      <ListItem key={text} disablePadding sx={{ display: "block" }}>
+        <ListItemButton
+          sx={[
+            {
+              minHeight: 48,
+              px: 2.5,
+              color: "white",
+            },
+            open
+              ? {
+                  justifyContent: "initial",
+                }
+              : {
+                  justifyContent: "center",
+                },
+          ]}
+        >
+          <ListItemIcon
+            sx={[
+              {
+                minWidth: 0,
+                justifyContent: "center",
+                color: "white",
+              },
+              open
+                ? {
+                    mr: 3,
+                  }
+                : {
+                    mr: "auto",
+                  },
+            ]}
+          >
+            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+          </ListItemIcon>
+          <ListItemText
+            primary={text}
+            sx={[open ? { opacity: 1 } : { opacity: 0 }]}
+          />
+        </ListItemButton>
+      </ListItem>
+    ))}
+  </List>
+</Drawer>
+  */
+
+
+
+
+
+  /* <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <DrawerHeader />
+        <Typography sx={{ marginBottom: 2 }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
+          enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
+          imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
+          Convallis convallis tellus id interdum velit laoreet id donec ultrices.
+          Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
+          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
+          nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
+          leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
+          feugiat vivamus at augue. At augue eget arcu dictum varius duis at
+          consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
+          sapien faucibus et molestie ac.
+        </Typography>
+        <Typography sx={{ marginBottom: 2 }}>
+          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
+          eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
+          neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
+          tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
+          sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
+          tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
+          gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
+          et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
+          tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
+          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
+          posuere sollicitudin aliquam ultrices sagittis orci a.
+        </Typography>
+      </Box> */
+
+
+      /* // import React, { useState } from "react";
+// import { TextField, Button, Container, Typography } from "@mui/material";
+
+//     const Register = () => {
+//         const [email, setEmail] = useState("");
+//         const [password, setPassword] = useState("");
+      
+//         const handleRegister = () => {
+//           localStorage.setItem("email", email);
+//           localStorage.setItem("password", password);
+//           alert("Registration successful. You can now log in.");
+//         };
+      
+//         return (
+//           <Container maxWidth="sm">
+//             <Typography variant="h4" gutterBottom>Register</Typography>
+//             <TextField
+//               label="Email"
+//               variant="outlined"
+//               fullWidth
+//               margin="normal"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//             />
+//             <TextField
+//               label="Password"
+//               type="password"
+//               variant="outlined"
+//               fullWidth
+//               margin="normal"
+//               value={password}
+//               onChange={(e) => setPassword(e.target.value)}
+//             />
+//             <Button variant="contained" color="primary" fullWidth onClick={handleRegister}>
+//               Register
+//             </Button>
+//           </Container>
+//         );
+//       };
+      
+
+// export default Register; */
