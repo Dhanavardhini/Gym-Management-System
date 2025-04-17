@@ -1,8 +1,22 @@
-# React + Vite
+💪 Gym Management System
+A responsive and user-friendly Gym Management System built with React.js, CSS, HTML, Bootstrap, and Material-UI (MUI). This system simplifies gym operations by providing a seamless interface to manage members, track progress, schedule sessions, and more.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+✅ Responsive Design for all devices
 
-Currently, two official plugins are available:
+📋 Member Management: Add, edit, or remove gym members
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧾 Payment Tracking: Monitor membership fees and payments
+
+📊 Progress Monitoring: Track members' fitness journey
+
+🔍 Search & Filter: Easily find members or sessions
+
+☑️ Select All Rows using a checkbox in DataGrid (MUI)
+
+🛠️ Tech Stack
+Frontend: React.js
+
+Styling: CSS, HTML, Bootstrap, Material-UI (MUI)
+
+Responsive UI: Optimized for all screen sizes using MUI components and Bootstrap utilities
